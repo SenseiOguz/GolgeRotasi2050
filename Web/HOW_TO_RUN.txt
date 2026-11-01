@@ -1,0 +1,6 @@
+Gölge Rotası: 2050 v1.1.0
+Commit: ff6f0c224cda4245d4bd817e587c847847d7f913
+
+Çevrimdışı: GolgeRotasi2050-v1.1.0-offline.html dosyasını Chrome/Edge ile açın.
+Normal web: dist/ klasörünü statik HTTP sunucusunda yayınlayın; giriş dist/index.html. ZIP tek bir dist/ klasörü içerir (dist/dist yok). Normal dist dosyasını file:// ile açmak yerine offline HTML kullanın.
+Oyuna Başla -> harita -> açık bölüm. Ayrıntılar ../BASLAT.md.
