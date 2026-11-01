@@ -1,0 +1,854 @@
+{
+  "area": "world",
+  "phase": "F2 production complete (awaiting review)",
+  "notes": {
+    "anchors": "Tiles: centre. Objects: bottom-centre; sprite bottom sits on the tile's bottom edge. Buildings are 40x48 (40x40 footprint + max 8 px upward overhang); bldg-a re-cut from 40x56 to 40x48. Courier: feet at row 42 of 48 (anchor y 0.875).",
+    "tile-park": "Same image as tile-park-lush (default park state).",
+    "tile-water-h": "The vertical canal rotated 90 degrees, so both canals match exactly.",
+    "tool-cool-roof": "Transparent placement overlay: white reflective roof panel with solar panels and a small shine sparkle; roof block sits at rows 9-32 of 40x48.",
+    "not-provided": "tile-building is not delivered; buildings stand on tile-lot.",
+    "courier": "v2 design (PixelLab v3, high top-down). All 10 courier files share one 16-colour set. Sheets are horizontal strips of 48x48 frames, no spacing: walk-s/e/n/w 6 frames (10 fps, loop), idle-s 4 (5 fps, loop), deliver 5 (8 fps, once; template picking-up). The north walk and static north show a cross on the jacket instead of the back box (two PixelLab templates both dropped the box from behind)."
+  },
+  "assets": [
+    {
+      "key": "tile-goal",
+      "file": "src/assets/pixel/world/tiles/tile-goal.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 40
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "key": "tile-lot",
+      "file": "src/assets/pixel/world/tiles/tile-lot.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 40
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "key": "tile-park",
+      "file": "src/assets/pixel/world/tiles/tile-park.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 40
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "key": "tile-park-dry",
+      "file": "src/assets/pixel/world/tiles/tile-park_dry.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 40
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "key": "tile-park-lush",
+      "file": "src/assets/pixel/world/tiles/tile-park_lush.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 40
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "key": "tile-road-corner-en",
+      "file": "src/assets/pixel/world/tiles/tile-road-corner-en.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 40
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "key": "tile-road-corner-en-cool",
+      "file": "src/assets/pixel/world/tiles/tile-road-corner-en_cool.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 40
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "key": "tile-road-corner-en-hot",
+      "file": "src/assets/pixel/world/tiles/tile-road-corner-en_hot.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 40
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "key": "tile-road-corner-es",
+      "file": "src/assets/pixel/world/tiles/tile-road-corner-es.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 40
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "key": "tile-road-corner-es-cool",
+      "file": "src/assets/pixel/world/tiles/tile-road-corner-es_cool.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 40
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "key": "tile-road-corner-es-hot",
+      "file": "src/assets/pixel/world/tiles/tile-road-corner-es_hot.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 40
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "key": "tile-road-corner-wn",
+      "file": "src/assets/pixel/world/tiles/tile-road-corner-wn.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 40
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "key": "tile-road-corner-wn-cool",
+      "file": "src/assets/pixel/world/tiles/tile-road-corner-wn_cool.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 40
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "key": "tile-road-corner-wn-hot",
+      "file": "src/assets/pixel/world/tiles/tile-road-corner-wn_hot.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 40
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "key": "tile-road-corner-ws",
+      "file": "src/assets/pixel/world/tiles/tile-road-corner-ws.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 40
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "key": "tile-road-corner-ws-cool",
+      "file": "src/assets/pixel/world/tiles/tile-road-corner-ws_cool.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 40
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "key": "tile-road-corner-ws-hot",
+      "file": "src/assets/pixel/world/tiles/tile-road-corner-ws_hot.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 40
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "key": "tile-road-v",
+      "file": "src/assets/pixel/world/tiles/tile-road-v.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 40
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "key": "tile-road-v-cool",
+      "file": "src/assets/pixel/world/tiles/tile-road-v_cool.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 40
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "key": "tile-road-v-hot",
+      "file": "src/assets/pixel/world/tiles/tile-road-v_hot.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 40
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "key": "tile-road",
+      "file": "src/assets/pixel/world/tiles/tile-road.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 40
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "key": "tile-road-cool",
+      "file": "src/assets/pixel/world/tiles/tile-road_cool.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 40
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "key": "tile-road-hot",
+      "file": "src/assets/pixel/world/tiles/tile-road_hot.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 40
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "key": "tile-start",
+      "file": "src/assets/pixel/world/tiles/tile-start.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 40
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "key": "tile-water",
+      "file": "src/assets/pixel/world/tiles/tile-water.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 40
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "key": "tile-water-h",
+      "file": "src/assets/pixel/world/tiles/tile-water_h.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 40
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "key": "bldg-a-coolroof",
+      "file": "src/assets/pixel/world/objects/bldg-a_coolroof.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 48
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      }
+    },
+    {
+      "key": "bldg-a-hot",
+      "file": "src/assets/pixel/world/objects/bldg-a_hot.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 48
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      }
+    },
+    {
+      "key": "bldg-apartment-coolroof",
+      "file": "src/assets/pixel/world/objects/bldg-apartment_coolroof.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 48
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      }
+    },
+    {
+      "key": "bldg-apartment-hot",
+      "file": "src/assets/pixel/world/objects/bldg-apartment_hot.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 48
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      }
+    },
+    {
+      "key": "bldg-commercial-coolroof",
+      "file": "src/assets/pixel/world/objects/bldg-commercial_coolroof.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 48
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      }
+    },
+    {
+      "key": "bldg-commercial-hot",
+      "file": "src/assets/pixel/world/objects/bldg-commercial_hot.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 48
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      }
+    },
+    {
+      "key": "bldg-depot",
+      "file": "src/assets/pixel/world/objects/bldg-depot.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 48
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      }
+    },
+    {
+      "key": "bldg-hospital",
+      "file": "src/assets/pixel/world/objects/bldg-hospital.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 48
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      }
+    },
+    {
+      "key": "bldg-house-coolroof",
+      "file": "src/assets/pixel/world/objects/bldg-house_coolroof.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 48
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      }
+    },
+    {
+      "key": "bldg-house-hot",
+      "file": "src/assets/pixel/world/objects/bldg-house_hot.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 48
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      }
+    },
+    {
+      "key": "bldg-office-coolroof",
+      "file": "src/assets/pixel/world/objects/bldg-office_coolroof.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 48
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      }
+    },
+    {
+      "key": "bldg-office-hot",
+      "file": "src/assets/pixel/world/objects/bldg-office_hot.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 48
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      }
+    },
+    {
+      "key": "tool-canopy",
+      "file": "src/assets/pixel/world/objects/tool-canopy.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 48
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      }
+    },
+    {
+      "key": "tool-cool-roof",
+      "file": "src/assets/pixel/world/objects/tool-cool-roof.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 48
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      }
+    },
+    {
+      "key": "tool-tree",
+      "file": "src/assets/pixel/world/objects/tool-tree.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 48
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      }
+    },
+    {
+      "key": "courier-deliver",
+      "file": "src/assets/pixel/world/characters/courier-deliver.png",
+      "nativeSize": {
+        "width": 48,
+        "height": 48
+      },
+      "frames": 5,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.875
+      },
+      "frameWidth": 48,
+      "frameHeight": 48,
+      "fps": 8,
+      "loop": false
+    },
+    {
+      "key": "courier-e",
+      "file": "src/assets/pixel/world/characters/courier-e.png",
+      "nativeSize": {
+        "width": 48,
+        "height": 48
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.875
+      }
+    },
+    {
+      "key": "courier-idle-s",
+      "file": "src/assets/pixel/world/characters/courier-idle-s.png",
+      "nativeSize": {
+        "width": 48,
+        "height": 48
+      },
+      "frames": 4,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.875
+      },
+      "frameWidth": 48,
+      "frameHeight": 48,
+      "fps": 5,
+      "loop": true
+    },
+    {
+      "key": "courier-n",
+      "file": "src/assets/pixel/world/characters/courier-n.png",
+      "nativeSize": {
+        "width": 48,
+        "height": 48
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.875
+      }
+    },
+    {
+      "key": "courier-w",
+      "file": "src/assets/pixel/world/characters/courier-w.png",
+      "nativeSize": {
+        "width": 48,
+        "height": 48
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.875
+      }
+    },
+    {
+      "key": "courier-walk-e",
+      "file": "src/assets/pixel/world/characters/courier-walk-e.png",
+      "nativeSize": {
+        "width": 48,
+        "height": 48
+      },
+      "frames": 6,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.875
+      },
+      "frameWidth": 48,
+      "frameHeight": 48,
+      "fps": 10,
+      "loop": true
+    },
+    {
+      "key": "courier-walk-n",
+      "file": "src/assets/pixel/world/characters/courier-walk-n.png",
+      "nativeSize": {
+        "width": 48,
+        "height": 48
+      },
+      "frames": 6,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.875
+      },
+      "frameWidth": 48,
+      "frameHeight": 48,
+      "fps": 10,
+      "loop": true
+    },
+    {
+      "key": "courier-walk-s",
+      "file": "src/assets/pixel/world/characters/courier-walk-s.png",
+      "nativeSize": {
+        "width": 48,
+        "height": 48
+      },
+      "frames": 6,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.875
+      },
+      "frameWidth": 48,
+      "frameHeight": 48,
+      "fps": 10,
+      "loop": true
+    },
+    {
+      "key": "courier-walk-w",
+      "file": "src/assets/pixel/world/characters/courier-walk-w.png",
+      "nativeSize": {
+        "width": 48,
+        "height": 48
+      },
+      "frames": 6,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.875
+      },
+      "frameWidth": 48,
+      "frameHeight": 48,
+      "fps": 10,
+      "loop": true
+    },
+    {
+      "key": "courier",
+      "file": "src/assets/pixel/world/characters/courier.png",
+      "nativeSize": {
+        "width": 48,
+        "height": 48
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.875
+      }
+    },
+    {
+      "key": "decor-bench",
+      "file": "src/assets/pixel/world/objects/decor-bench.png",
+      "nativeSize": {
+        "width": 24,
+        "height": 24
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "Promoted byte-identically from art/world/staging/decor/decor-bench.png",
+      "sha256": "48ca5ecfe95570bdde158d2e7fa62f06cc17673692e88d26bf2a7070311c6598"
+    },
+    {
+      "key": "decor-lamp",
+      "file": "src/assets/pixel/world/objects/decor-lamp.png",
+      "nativeSize": {
+        "width": 24,
+        "height": 24
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "Promoted byte-identically from art/world/staging/decor/decor-lamp.png",
+      "sha256": "eab6afd330d65fdc9421a9fd175707904584bc46e6b8fc2898e3b918013eea24"
+    },
+    {
+      "key": "decor-bush",
+      "file": "src/assets/pixel/world/objects/decor-bush.png",
+      "nativeSize": {
+        "width": 24,
+        "height": 24
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "Promoted byte-identically from art/world/staging/decor/decor-bush.png",
+      "sha256": "15696ac3b3c1218d5fdd331154726ec663f93ee3f39240171e5236305c0ea53a"
+    },
+    {
+      "key": "decor-planter",
+      "file": "src/assets/pixel/world/objects/decor-planter.png",
+      "nativeSize": {
+        "width": 24,
+        "height": 24
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "Promoted byte-identically from art/world/staging/decor/decor-planter.png",
+      "sha256": "18929f857ccb088c57a02da857001aa5ae2b11b687bf829dffb6a93ac9798358"
+    },
+    {
+      "key": "decor-sign",
+      "file": "src/assets/pixel/world/objects/decor-sign.png",
+      "nativeSize": {
+        "width": 24,
+        "height": 24
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "Promoted byte-identically from art/world/staging/decor/decor-sign.png",
+      "sha256": "2db10e6a798b50bbc7d0ea298d8c38a12f7260d08513dffe07c62ad6bc2ff3df"
+    },
+    {
+      "key": "bldg-factory-hot",
+      "file": "src/assets/pixel/world/objects/bldg-factory_hot.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 48
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      }
+    },
+    {
+      "key": "bldg-factory-coolroof",
+      "file": "src/assets/pixel/world/objects/bldg-factory_coolroof.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 48
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      }
+    },
+    {
+      "key": "bldg-warehouse-hot",
+      "file": "src/assets/pixel/world/objects/bldg-warehouse_hot.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 48
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      }
+    },
+    {
+      "key": "bldg-warehouse-coolroof",
+      "file": "src/assets/pixel/world/objects/bldg-warehouse_coolroof.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 48
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      }
+    },
+    {
+      "key": "tile-construction",
+      "file": "src/assets/pixel/world/tiles/tile-construction.png",
+      "nativeSize": {
+        "width": 40,
+        "height": 40
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "key": "decor-cone",
+      "file": "src/assets/pixel/world/objects/decor-cone.png",
+      "nativeSize": {
+        "width": 24,
+        "height": 24
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 1
+      }
+    }
+  ]
+}

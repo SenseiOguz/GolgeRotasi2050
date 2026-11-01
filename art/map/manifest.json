@@ -1,0 +1,118 @@
+{
+  "area": "map",
+  "phase": "four-levels",
+  "notes": {
+    "map-bg": "Opaque 640x360 level-select map, shown at x2 (1280x720). Pixen 640x360 (seed 2050), snapped to palette32 locally, plus a sparse heat dither over the downtown corner (x>=578, y<=240). Districts: green park bottom-left (level 1), dense houses centre (2), factories right (3), hot downtown top-right (4). No baked text.",
+    "nodes": "Markers are drawn locally. Draw them centred on the map-layout.json node points (anchor 0.5, 0.5). current has a single frame: animate the pulse in code (scale or tint tween).",
+    "path": "map-path-dot is placed every ~10 native px along the map-layout.json polylines.",
+    "layout": "src/assets/pixel/map/map-layout.json holds the node points and the paths in native 640x360 coordinates.",
+    "icons": "icon-heatwave / icon-delivery are 24x24 HUD/map icons kept in the map area (ART-MAP may only write map/ and new world/ files). 4 px transparent margin like the ui icons.",
+    "worldAdditions": "World sprites for levels 3-4 are listed in art/map/world-additions.json (merge into art/world/manifest.json)."
+  },
+  "assets": [
+    {
+      "key": "map-bg",
+      "file": "src/assets/pixel/map/map-bg.png",
+      "nativeSize": {
+        "width": 640,
+        "height": 360
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "key": "map-node-open",
+      "file": "src/assets/pixel/map/map-node-open.png",
+      "nativeSize": {
+        "width": 32,
+        "height": 32
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "key": "map-node-current",
+      "file": "src/assets/pixel/map/map-node-current.png",
+      "nativeSize": {
+        "width": 32,
+        "height": 32
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "key": "map-node-done",
+      "file": "src/assets/pixel/map/map-node-done.png",
+      "nativeSize": {
+        "width": 32,
+        "height": 32
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "key": "map-node-locked",
+      "file": "src/assets/pixel/map/map-node-locked.png",
+      "nativeSize": {
+        "width": 32,
+        "height": 32
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "key": "map-path-dot",
+      "file": "src/assets/pixel/map/map-path-dot.png",
+      "nativeSize": {
+        "width": 8,
+        "height": 8
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "key": "icon-heatwave",
+      "file": "src/assets/pixel/map/icon-heatwave.png",
+      "nativeSize": {
+        "width": 24,
+        "height": 24
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "key": "icon-delivery",
+      "file": "src/assets/pixel/map/icon-delivery.png",
+      "nativeSize": {
+        "width": 24,
+        "height": 24
+      },
+      "frames": 1,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  ]
+}

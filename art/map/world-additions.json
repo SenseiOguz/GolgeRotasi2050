@@ -1,0 +1,12 @@
+{
+  "area": "world",
+  "note": "New four-level world sprites. PX-CORE: append these records to art/world/manifest.json \"assets\" and register the keys in pixelKeys.ts. Same conventions as the F2 buildings: 40x48, 36 px wide (x 2-37), bottom on row 45, anchor bottom-centre; palette32, alpha 0/255, no baked shadow.",
+  "assets": [
+    {"key": "bldg-factory-hot", "file": "src/assets/pixel/world/objects/bldg-factory_hot.png", "nativeSize": {"width": 40, "height": 48}, "frames": 1, "anchor": {"x": 0.5, "y": 1}},
+    {"key": "bldg-factory-coolroof", "file": "src/assets/pixel/world/objects/bldg-factory_coolroof.png", "nativeSize": {"width": 40, "height": 48}, "frames": 1, "anchor": {"x": 0.5, "y": 1}},
+    {"key": "bldg-warehouse-hot", "file": "src/assets/pixel/world/objects/bldg-warehouse_hot.png", "nativeSize": {"width": 40, "height": 48}, "frames": 1, "anchor": {"x": 0.5, "y": 1}},
+    {"key": "bldg-warehouse-coolroof", "file": "src/assets/pixel/world/objects/bldg-warehouse_coolroof.png", "nativeSize": {"width": 40, "height": 48}, "frames": 1, "anchor": {"x": 0.5, "y": 1}},
+    {"key": "tile-construction", "file": "src/assets/pixel/world/tiles/tile-construction.png", "nativeSize": {"width": 40, "height": 40}, "frames": 1, "anchor": {"x": 0.5, "y": 0.5}},
+    {"key": "decor-cone", "file": "src/assets/pixel/world/objects/decor-cone.png", "nativeSize": {"width": 24, "height": 24}, "frames": 1, "anchor": {"x": 0.5, "y": 1}}
+  ]
+}

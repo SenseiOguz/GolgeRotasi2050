@@ -1,0 +1,85 @@
+{
+ "badge": {
+  "key": "ui-badge-9",
+  "x": 16,
+  "y": 10,
+  "w": 150,
+  "h": 14,
+  "slice": 2
+ },
+ "panel": {
+  "key": "ui-panel-9",
+  "x": 12,
+  "y": 30,
+  "w": 224,
+  "h": 216,
+  "slice": 5
+ },
+ "plate": {
+  "key": "ui-logo-plate",
+  "x": 18,
+  "y": 36,
+  "w": 212,
+  "h": 98,
+  "slice": 24
+ },
+ "titleText": {
+  "text": "GÖLGE ROTASI:",
+  "x": 42,
+  "y": 46,
+  "fontPx": 48,
+  "color": "#1B3044",
+  "shadow": "#FFE6A3 2px"
+ },
+ "logo2050": {
+  "key": "ui-logo-2050",
+  "x": 30,
+  "y": 60
+ },
+ "emblem": {
+  "key": "menu-emblem",
+  "x": 194,
+  "y": 78
+ },
+ "sloganText": {
+  "text": "Bir şehri serinlet. Bir hayatı kurtar.",
+  "x": 24,
+  "y": 141,
+  "fontPx": 20,
+  "color": "#3D2E35"
+ },
+ "buttons": [
+  {
+   "label": "OYUNA BAŞLA",
+   "kind": "primary",
+   "x": 24,
+   "y": 158,
+   "w": 200,
+   "h": 24
+  },
+  {
+   "label": "NASIL OYNANIR",
+   "kind": "secondary",
+   "x": 24,
+   "y": 186,
+   "w": 200,
+   "h": 24
+  },
+  {
+   "label": "SES AYARLARI",
+   "kind": "secondary",
+   "x": 24,
+   "y": 214,
+   "w": 200,
+   "h": 24
+  }
+ ],
+ "footer": {
+  "key": "ui-panel-9",
+  "x": 12,
+  "y": 340,
+  "w": 332,
+  "h": 16,
+  "slice": 5
+ }
+}
